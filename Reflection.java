@@ -19,6 +19,8 @@ package reflection;
 
 import java.lang.reflect.Method;
 
+import circle.ColoredCircle;
+
 public class Reflection {
 
 	/**
@@ -46,6 +48,14 @@ public class Reflection {
 		// TODO To complete
 		// You need to use the EXACT format of the output
 		// Hint: Use the method getSuperClass()
+		System.out.println("Inheritance chain:");
+        Class<?> currentClass = o.getClass();
+
+        while (currentClass != null) {
+            System.out.println(currentClass.getName());
+            currentClass = currentClass.getSuperclass();
+        }
+        System.out.println("java.lang.Object");
 	}
 	
 	/**
@@ -62,6 +72,10 @@ public class Reflection {
 		// TODO To complete
 		// Print each method on one line
 		// Use this EXACT format
+		System.out.println("List of methods:");
+        for (Method method : m) {
+            System.out.println(method.toString());
+        }
 		System.out.println("\n");
 	}
 
@@ -81,9 +95,17 @@ public class Reflection {
 		
 		// Demonstration of the methods on an objet of type String
 		// TODO To complete
+		String sampleString = "Hello, CS361!";
+        r.correspondingClass(sampleString);
+        r.inheritanceChain(sampleString);
+        r.listMethods(sampleString);
 		
 		// Demonstration of the methods on an objet of type ColoredCircle
-		// TODO To complete		
+		// TODO To complete
+        ColoredCircle coloredCircle = new ColoredCircle(); 
+        r.correspondingClass(coloredCircle);
+        r.inheritanceChain(coloredCircle);
+        r.listMethods(coloredCircle);
 	}
 
 }
