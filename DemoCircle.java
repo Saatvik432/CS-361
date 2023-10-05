@@ -61,7 +61,7 @@ public class DemoCircle {
 		Circle c3 = c1.clone();
 		// TODO write a conditional that checks that c3.equals(c1) is true and print "c3.equals(c1) is true" or "c3.equals(c1) is false" otherwise
 		System.out.print("c3.equals(c1) is ");
-		if(c2.equals(c1)) System.out.println("true");
+		if(c3.equals(c1)) System.out.println("true");
 		else System.out.println("false");
 	}
 

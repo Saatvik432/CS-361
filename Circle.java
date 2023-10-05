@@ -86,18 +86,12 @@ public class Circle extends GraphicObject {
 	 */
 	@Override
 	protected Circle clone() {
-	    //try {
 	        Circle clonedCircle = new Circle();
 	        clonedCircle.centerX = this.centerX;
 	        clonedCircle.centerY = this.centerY;
 	        clonedCircle.radius = this.radius;
-	        clonedCircle.windowNumber = this.windowNumber;
-	        
-	        return clonedCircle;
-	    //} catch (CloneNotSupportedException e) {
-	        // This should not happen since Circle extends Object which supports cloning
-	    //    throw new InternalError(e);
-	    //}
+	        clonedCircle.windowNumber = this.windowNumber; 
+	        return clonedCircle;	
 	}
 
 }
